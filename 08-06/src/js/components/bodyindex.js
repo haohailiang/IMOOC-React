@@ -1,9 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import BodyChild from './bodychild';
+import React      from 'react';
+import ReactDOM   from 'react-dom';
+import BodyChild  from './bodychild';
 
 import ReactMixin from 'react-mixin';
-import MixinLog from './mixins';
+import MixinLog   from './mixins';
 
 const defaultProps = {
 	username: '这是一个默认的用户名'
