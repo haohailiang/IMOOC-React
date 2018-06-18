@@ -1,7 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React                        from 'react';
+import ReactDOM                     from 'react-dom';
 import {Router, Route, hashHistory} from 'react-router';
-import {Button} from 'antd';
+import {Button}                     from 'antd';
 import 'antd/dist/antd.css';
 
 export default class Root extends React.Component {
