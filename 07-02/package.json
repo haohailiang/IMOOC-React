@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack",
+    "start" : "webpack-dev-server --contentbase src --inline --hot"
   },
   "author": "",
   "license": "ISC",
@@ -14,6 +15,7 @@
     "babelify": "^7.3.0",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
+	"babel-loader": "6.2.5",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.16.1"
   }
