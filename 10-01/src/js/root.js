@@ -1,8 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Index from './index';
-import ComponentList from './components/list';
-import ComponentDetails from './components/details';
+import React                      from 'react';
+import ReactDOM                   from 'react-dom';
+import Index                      from './index';
+import ComponentList              from './components/list';
+import ComponentDetails           from './components/details';
 import {Router,Route,hashHistory} from 'react-router';
 
 export default class Root extends React.Component{
