@@ -1,4 +1,5 @@
 import React from 'react';
+
 export default class ComponentHeader extends React.Component {
 
 constructor(){
@@ -17,10 +18,10 @@ switchHeader(){
 	render() {
 		const styleComponentHeader = {
 			header: {
-				backgroundColor: "#333333",
-				color: "#FFFFFF",
-				"padding-top": (this.state.miniHeader) ? "3px" : "15px",
-				paddingBottom: (this.state.miniHeader) ? "3px" : "15px"
+				backgroundColor : "#333333",
+				color           : "#FFFFFF",
+				"padding-top"   : (this.state.miniHeader) ? "3px" : "15px",
+				paddingBottom   : (this.state.miniHeader) ? "3px" : "15px"
 			},
 			//还可以定义其他的样式
 		};
