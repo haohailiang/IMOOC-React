@@ -30,3 +30,42 @@
 [React 项目的优化、打包与部署 优酷](http://v.youku.com/v_show/id_XMzQ5MjE3NDg1Ng==.html)
 
 [React 项目的优化、打包与部署 bilibili](https://www.bilibili.com/video/av21258295/)
+## React入门基础与案例开发-实战[前置知识点]
+1. 包含新闻客户端
+2. 包含基础知识点讲解
+3. 云编程工具的使用
+## 源代码 && QA
+https://coding.imooc.com/learn/questiondetail/11238.html
+## facebook官网
+https://reactjs.org/
+## awesome-react
+https://github.com/enaqx/awesome-react
+## ES6学习站点
+https://www.babeljs.cn/  
+https://www.babeljs.io/  
+## 兼容性查询
+http://kangax.github.io/compat-table/es5/
+## 安装的包
+```
+sudo npm install --save-dev babel-cli babel-present-env
+```
+## cdn
+https://cdnjs.com/  
+课程版本 15.3.2
+## 如何查看所有的历史版本
+https://facebook.github.io/react/blog/all.html  
+https://cdnjs.com/libraries/react  
+https://github.com/facebook/react/commits/master
+## npm安装配置路径
+```
+.npmrc
+registry=https://registry.npm.taobao.org
+```
+## cnpm windows和mac系统的安装
+http://blog.parryqiu.com/2016/08/18/ionic_installation/
+## 慕课网手记
+http://www.imooc.com/article/17442
+## chrome扩展
+chrome://extensions/
+## chrome商店
+https://chrome.google.com/webstore/category/extensions
