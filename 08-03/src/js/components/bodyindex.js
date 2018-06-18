@@ -1,5 +1,6 @@
-import React from 'react';
+import React     from 'react';
 import BodyChild from './bodychild';
+
 export default class BodyIndex extends React.Component {
 	constructor() {
 		super(); //调用基类的所有的初始化方法
@@ -24,7 +25,7 @@ export default class BodyIndex extends React.Component {
 				<h2>页面的主体内容</h2>
 				<p>{this.props.userid} {this.props.username}</p>
 				<p>age: {this.state.age}</p>
-				<input type="button" value="提交" onClick={this.changeUserInfo.bind(this,99)}/>
+				<input type="button" value="提交" onClick={this.changeUserInfo.bind(this, 99)}/>
 				<BodyChild handleChildValueChange={this.handleChildValueChange.bind(this)}/>
 			</div>
 		)
