@@ -1,8 +1,10 @@
-import React from 'react';
-import {Row, Col} from 'antd';
+import React        from 'react';
+import {Row, Col}   from 'antd';
 import {Menu, Icon} from 'antd';
-const SubMenu = Menu.SubMenu;
+
+const SubMenu       = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
+
 export default class PCHeader extends React.Component {
 	constructor() {
 		super();
