@@ -1,6 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React     from 'react';
+import ReactDOM  from 'react-dom';
 import BodyChild from './bodychild';
+
 const defaultProps = {
 	username: '这是一个默认的用户名'
 };

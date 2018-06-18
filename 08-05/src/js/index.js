@@ -1,8 +1,10 @@
-var React = require('react');
+var React    = require('react');
 var ReactDOM = require('react-dom');
+
 import ComponentHeader from './components/header';
 import ComponentFooter from './components/footer';
-import BodyIndex from './components/bodyindex';
+import BodyIndex       from './components/bodyindex';
+
 class Index extends React.Component {
 
 	componentWillMount(){
