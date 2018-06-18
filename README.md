@@ -69,3 +69,5 @@ http://www.imooc.com/article/17442
 chrome://extensions/
 ## chrome商店
 https://chrome.google.com/webstore/category/extensions
+## 站长工具
+http://tool.chinaz.com/tools/unicode.aspx
