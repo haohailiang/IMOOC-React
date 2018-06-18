@@ -1,25 +1,26 @@
-var React = require('react');
+var React    = require('react');
 var ReactDOM = require('react-dom');
-import ComponentHeader from './components/header';
-import ComponentFooter from './components/footer';
-import BodyIndex from './components/bodyindex';
+import ComponentHeader        from './components/header';
+import ComponentLoginedHeader from './components/login-header';
+import ComponentFooter        from './components/footer';
+import BodyIndex              from './components/bodyindex';
 
 class Index extends React.Component {
 	render() {
 
-		/*
 		var component;
-		if (用户已登录) {
+		var isLogin = Math.random() > 0.5;
+
+		if (!isLogin) {
 			component = <ComponentLoginedHeader/>
 		}
 		else{
 			component = <ComponentHeader/>
 		}
-		*/
 
 		return (
 			<div>
-				<ComponentHeader/>
+				{ component }
 				<BodyIndex/>
 				<ComponentFooter/>
 			</div>

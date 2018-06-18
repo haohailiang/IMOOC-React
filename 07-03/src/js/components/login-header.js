@@ -4,7 +4,7 @@ export default class ComponentHeader extends React.Component{
   render(){
     return (
       <header>
-        <h1>你好,XXX, 这里是头部</h1>
+        <h1>请登录, 这里是头部</h1>
       </header>
     )
   }
