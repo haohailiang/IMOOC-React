@@ -1,4 +1,4 @@
-import React from 'react';
+import React      from 'react';
 import {Row, Col} from 'antd';
 import {
 	Menu,
@@ -11,20 +11,22 @@ import {
 	CheckBox,
 	Modal
 } from 'antd';
-const FormItem = Form.Item;
-const SubMenu = Menu.SubMenu;
-const TabPane = Tabs.TabPane;
+
+const FormItem      = Form.Item;
+const SubMenu       = Menu.SubMenu;
+const TabPane       = Tabs.TabPane;
 const MenuItemGroup = Menu.ItemGroup;
+
 class PCHeader extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			current: 'top',
-			modalVisible: false,
-			action: 'login',
-			hasLogined: false,
-			userNickName: '',
-			userid: 0
+			current      : 'top',
+			modalVisible : false,
+			action       : 'login',
+			hasLogined   : false,
+			userNickName : '',
+			userid       : 0
 		};
 	};
 	setModalVisible(value)
@@ -49,10 +51,19 @@ class PCHeader extends React.Component {
 			method: 'GET'
 		};
 		var formData= this.props.form.getFieldsValue();
+		var _self = this;
 		console.log(formData);
 		fetch("http://newsapi.gugujiankong.com/Handler.ashx?action=register&username=userName&password=password&r_userName="+formData.r_userName+"&r_password="+formData.r_password+"&r_confirmPassword="+formData.r_confirmPassword,myFetchOptions).
-		then(response=>response.json()).then(json=>{
-			this.setState({userNickName:json.NickUserName,userid:json.UserId});
+		then(response=>{
+			console.log( response );
+			return response.json();
+		}).then(json=>{
+			console.log( json );
+			// this.setState({userNickName:json.NickUserName,userid:json.UserId});
+			console.log( formData.r_userName );
+			// this.setState({userNickName:formData.r_userName});
+			_self.setState({hasLogined:true});
+			_self.setState({userNickName:formData.r_userName});
 
 		});
 		message.success("请求成功！");
