@@ -1,5 +1,7 @@
-import React from 'react';
-import {Row, Col} from 'antd';
+import React                                 from 'react';
+import {Row, Col}                            from 'antd';
+import {Router, Route, Link, browserHistory} from 'react-router'
+
 import {
 	Menu,
 	Icon,
@@ -11,11 +13,12 @@ import {
 	CheckBox,
 	Modal
 } from 'antd';
-const FormItem = Form.Item;
-const SubMenu = Menu.SubMenu;
-const TabPane = Tabs.TabPane;
+
+const FormItem      = Form.Item;
+const SubMenu       = Menu.SubMenu;
+const TabPane       = Tabs.TabPane;
 const MenuItemGroup = Menu.ItemGroup;
-import {Router, Route, Link, browserHistory} from 'react-router'
+
 class CommonComments extends React.Component {
 	constructor() {
 		super();
