@@ -1,5 +1,6 @@
-import React from 'react';
+import React      from 'react';
 import {Row, Col} from 'antd';
+
 import {
 	Menu,
 	Icon,
@@ -11,21 +12,24 @@ import {
 	CheckBox,
 	Modal
 } from 'antd';
-const FormItem = Form.Item;
-const SubMenu = Menu.SubMenu;
-const TabPane = Tabs.TabPane;
+
+const FormItem      = Form.Item;
+const SubMenu       = Menu.SubMenu;
+const TabPane       = Tabs.TabPane;
 const MenuItemGroup = Menu.ItemGroup;
+
 import {Router, Route, Link, browserHistory} from 'react-router'
+
 class MobileHeader extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			current: 'top',
-			modalVisible: false,
-			action: 'login',
-			hasLogined: false,
-			userNickName: '',
-			userid: 0
+			current      : 'top',
+			modalVisible : false,
+			action       : 'login',
+			hasLogined   : false,
+			userNickName : '',
+			userid       : 0
 		};
 	};
 	setModalVisible(value)
