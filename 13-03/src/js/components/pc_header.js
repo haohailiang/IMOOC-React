@@ -1,4 +1,4 @@
-import React from 'react';
+import React      from 'react';
 import {Row, Col} from 'antd';
 import {
 	Menu,
@@ -11,11 +11,14 @@ import {
 	CheckBox,
 	Modal
 } from 'antd';
-const FormItem = Form.Item;
-const SubMenu = Menu.SubMenu;
-const TabPane = Tabs.TabPane;
+
+const FormItem      = Form.Item;
+const SubMenu       = Menu.SubMenu;
+const TabPane       = Tabs.TabPane;
 const MenuItemGroup = Menu.ItemGroup;
+
 import {Router, Route, Link, browserHistory} from 'react-router'
+
 class PCHeader extends React.Component {
 	constructor() {
 		super();
@@ -56,7 +59,10 @@ class PCHeader extends React.Component {
 		+"&r_userName=" + formData.r_userName + "&r_password="
 		+ formData.r_password + "&r_confirmPassword="
 		+ formData.r_confirmPassword, myFetchOptions)
-		.then(response => response.json())
+		.then(response => {
+			console.log( response );
+			return response.json();
+		})
 		.then(json => {
 			this.setState({userNickName: json.NickUserName, userid: json.UserId});
 		});
