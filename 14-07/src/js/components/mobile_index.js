@@ -1,8 +1,10 @@
-import React from 'react';
+import React        from 'react';
 import MobileHeader from './mobile_header';
 import MobileFooter from './mobile_footer';
-import {Tabs} from 'antd';
+import {Tabs}       from 'antd';
+
 const TabPane = Tabs.TabPane;
+
 export default class MobileIndex extends React.Component {
 	render() {
 		return (
