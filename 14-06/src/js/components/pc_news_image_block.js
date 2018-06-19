@@ -1,6 +1,7 @@
-import React from 'react';
-import {Card} from 'antd';
+import React                                 from 'react';
+import {Card}                                from 'antd';
 import {Router, Route, Link, browserHistory} from 'react-router'
+
 export default class PCNewsImageBlock extends React.Component {
 	constructor() {
 		super();
@@ -12,19 +13,21 @@ export default class PCNewsImageBlock extends React.Component {
 		var myFetchOptions = {
 			method: 'GET'
 		};
-		fetch("http://newsapi.gugujiankong.com/Handler.ashx?action=getnews&type=" + this.props.type + "&count=" + this.props.count, myFetchOptions).then(response => response.json()).then(json => this.setState({news: json}));
+		fetch("http://newsapi.gugujiankong.com/Handler.ashx?action=getnews&type=" + this.props.type + "&count=" + this.props.count, myFetchOptions)
+			.then(response => response.json())
+			.then(json => this.setState({news: json}));
 	};
 	render() {
 		const styleImage = {
-			display: "block",
-			width: this.props.imageWidth,
-			height: "90px"
+			display : "block",
+			width   : this.props.imageWidth,
+			height  : "90px"
 		};
 		const styeH3 = {
-			width: this.props.imageWidth,
-			whiteSpace: "nowrap",
-			overflow: "hidden",
-			textOverflow: "ellipsis"
+			width        : this.props.imageWidth,
+			whiteSpace   : "nowrap",
+			overflow     : "hidden",
+			textOverflow : "ellipsis"
 		};
 		const {news} = this.state;
 		const newsList = news.length

@@ -1,17 +1,19 @@
-import React from 'react';
-import {Row, Col} from 'antd';
+import React            from 'react';
+import {Row, Col}       from 'antd';
 import {Tabs, Carousel} from 'antd';
-const TabPane = Tabs.TabPane;
-import PCNewsBlock from './pc_news_block';
+import PCNewsBlock      from './pc_news_block';
 import PCNewsImageBlock from './pc_news_image_block';
+
+const TabPane = Tabs.TabPane;
+
 export default class PCNewsContainer extends React.Component {
 	render() {
 		const settings = {
-			dots: true,
-			infinite: true,
-			speed: 500,
-			slidesToShow: 1,
-			autoplay: true
+			dots         : true,
+			infinite     : true,
+			speed        : 500,
+			slidesToShow : 1,
+			autoplay     : true
 		};
 		return (
 			<div>
