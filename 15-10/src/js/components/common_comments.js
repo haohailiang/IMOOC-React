@@ -1,5 +1,6 @@
 import React from 'react';
 import {Row, Col} from 'antd';
+
 import {
 	Menu,
 	Icon,
@@ -13,6 +14,7 @@ import {
 	Card,
 	notification
 } from 'antd';
+
 const FormItem = Form.Item;
 const SubMenu = Menu.SubMenu;
 const TabPane = Tabs.TabPane;
@@ -43,15 +45,19 @@ class CommonComments extends React.Component {
 			this.componentDidMount();
 		})
 	};
+
 	addUserCollection() {
 		var myFetchOptions = {
 			method: 'GET'
 		};
-		fetch("http://newsapi.gugujiankong.com/Handler.ashx?action=uc&userid=" + localStorage.userid + "&uniquekey=" + this.props.uniquekey, myFetchOptions).then(response => response.json()).then(json => {
-			//收藏成功以后进行一下全局的提醒
-			notification['success']({message: 'ReactNews提醒', description: '收藏此文章成功'});
-		});
+		fetch("http://newsapi.gugujiankong.com/Handler.ashx?action=uc&userid=" + localStorage.userid + "&uniquekey=" + this.props.uniquekey, myFetchOptions)
+			.then(response => response.json())
+			.then(json => {
+				//收藏成功以后进行一下全局的提醒
+				notification['success']({message: 'ReactNews提醒', description: '收藏此文章成功'});
+			});
 	};
+
 	render() {
 		let {getFieldProps} = this.props.form;
 		const {comments} = this.state;
