@@ -1,9 +1,9 @@
-import React from 'react';
-import MobileHeader from './mobile_header';
-import MobileFooter from './mobile_footer';
-import {Tabs, Carousel} from 'antd';
+import React                 from 'react';
+import MobileHeader          from './mobile_header';
+import MobileFooter          from './mobile_footer';
+import {Tabs, Carousel}      from 'antd';
 const TabPane = Tabs.TabPane;
-import MobileList from './mobile_list';
+import MobileList            from './mobile_list';
 import MobileListPullRefresh from './mobile_list_pull_refresh';
 
 export default class MobileIndex extends React.Component {

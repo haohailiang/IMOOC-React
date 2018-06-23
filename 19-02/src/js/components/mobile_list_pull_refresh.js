@@ -1,29 +1,46 @@
-import React from 'react';
-import {Row,Col} from 'antd';
+import React                                 from 'react';
+import {Row,Col}                             from 'antd';
 import {Router, Route, Link, browserHistory} from 'react-router'
-import ReactPullToRefresh from 'react-pull-to-refresh';
+import ReactPullToRefresh                    from 'react-pull-to-refresh';
+
 export default class MobileList extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			news: ''
+			news: '',
+			count: 5,
+			canRefreshResolve: 1,
+			hasMore: 0,
+			initializing: 1,
+			refreshedAt: Date.now()
 		};
 	};
 	componentWillMount() {
 		var myFetchOptions = {
 			method: 'GET'
 		};
-		fetch("http://newsapi.gugujiankong.com/Handler.ashx?action=getnews&type=" + this.props.type + "&count=" + this.props.count, myFetchOptions).then(response => response.json()).then(json => this.setState({news: json}));
+		fetch("http://newsapi.gugujiankong.com/Handler.ashx?action=getnews&type=" + this.props.type + "&count=" + this.props.count, myFetchOptions)
+			.then(response => response.json())
+			.then(json => this.setState({news: json}));
 	};
+
+	loadMore(resolve) {
+		setTimeout(() => {
+
+			var count = this.state.count;
+		});
+	}
 
 	handleRefresh(resolve, reject){
 		var myFetchOptions = {
 			method: 'GET'
 		};
-		fetch("http://newsapi.gugujiankong.com/Handler.ashx?action=getnews&type=yule"+ "&count=20", myFetchOptions).then(response => response.json()).then(json => {
-			this.setState({news: json});
-			resolve();
-		});
+		fetch("http://newsapi.gugujiankong.com/Handler.ashx?action=getnews&type=yule"+ "&count=20", myFetchOptions)
+			.then(response => response.json())
+			.then(json => {
+				this.setState({news: json});
+				resolve();
+			});
 	};
 
 	render() {
