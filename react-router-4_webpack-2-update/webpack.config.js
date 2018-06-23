@@ -4,7 +4,7 @@ var path = require('path');
 
 module.exports = {
   devServer: {
-    historyApiFallback: true,
+    historyApiFallback: true, // 会定位详细错误
   },
   context: path.join(__dirname),
   devtool: debug ? "inline-sourcemap" : null,

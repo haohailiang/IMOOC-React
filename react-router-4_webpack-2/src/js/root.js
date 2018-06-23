@@ -1,15 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React                         from 'react';
+import ReactDOM                      from 'react-dom';
 import {Route, BrowserRouter,Switch} from 'react-router-dom';
-import Button from 'antd/lib/button';
-import PCIndex from './components/pc_index';
-import PCNewsDetails from './components/pc_news_details';
-import MobileNewsDetails from './components/mobile_news_details';
-import MobileIndex from './components/mobile_index';
-import PCUserCenter from './components/pc_usercenter';
-import MobileUserCenter from './components/mobile_usercenter';
+import Button                        from 'antd/lib/button';
+import PCIndex                       from './components/pc_index';
+import PCNewsDetails                 from './components/pc_news_details';
+import MobileNewsDetails             from './components/mobile_news_details';
+import MobileIndex                   from './components/mobile_index';
+import PCUserCenter                  from './components/pc_usercenter';
+import MobileUserCenter              from './components/mobile_usercenter';
 import 'antd/dist/antd.css';
-import MediaQuery from 'react-responsive';
+import MediaQuery                    from 'react-responsive';
+
 export default class Root extends React.Component {
 	render() {
 		return (

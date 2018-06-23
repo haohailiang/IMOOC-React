@@ -17,6 +17,7 @@ export default class Root extends React.Component {
 				<MediaQuery query='(min-device-width: 1224px)'>
 					<BrowserRouter>
 						<Switch>
+							{/* 严格限制,准确命中 */}
 							<Route exact path="/" component={PCIndex}></Route>
 							<Route path="/details/:uniquekey" component={PCNewsDetails}></Route>
 							<Route path="/usercenter" component={PCUserCenter}></Route>

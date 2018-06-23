@@ -4,8 +4,9 @@
   "description": "",
   "main": "root.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "./node_modules/.bin/webpack --progress --display-modules --profile --json > stats.json --colors --config webpack.production.config.js"
+      "build": "webpack",
+      "start": "webpack-dev-server --env development",
+      "build": "./node_modules/.bin/webpack --progress --display-modules --profile --json > stats.json --colors --config webpack.production.config.js"
   },
   "author": "",
   "license": "ISC",

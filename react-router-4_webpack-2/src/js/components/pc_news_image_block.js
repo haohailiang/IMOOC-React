@@ -1,6 +1,7 @@
-import React from 'react';
+import React  from 'react';
 import {Card} from 'antd';
 import {Link} from 'react-router-dom';
+
 export default class PCNewsImageBlock extends React.Component {
 	constructor() {
 		super();
@@ -16,15 +17,15 @@ export default class PCNewsImageBlock extends React.Component {
 	};
 	render() {
 		const styleImage = {
-			display: "block",
-			width: this.props.imageWidth,
-			height: "90px"
+			display : "block",
+			width   : this.props.imageWidth,
+			height  : "90px"
 		};
 		const styeH3 = {
-			width: this.props.imageWidth,
-			whiteSpace: "nowrap",
-			overflow: "hidden",
-			textOverflow: "ellipsis"
+			width        : this.props.imageWidth,
+			whiteSpace   : "nowrap",
+			overflow     : "hidden",
+			textOverflow : "ellipsis"
 		};
 		const {news} = this.state;
 		const newsList = news.length
