@@ -4,8 +4,8 @@
   "description": "",
   "main": "root.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --env development",
+	"start2": "webpack-dev-server --hot --inline",
     "build": "webpack -p",
     "stats":"webpack --env production --profile --json > stats.json"
   },

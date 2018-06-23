@@ -74,3 +74,11 @@ http://tool.chinaz.com/tools/unicode.aspx
 ## HTML2JSX[将你的HTML代码转化为JSX]
 https://www.geeksss.com/pages/html2jsx.php  
 https://magic.reactjs.net/htmltojsx.htm  
+## Fetch初体验
+http://blog.parryqiu.com/2016/03/02/using_fetch_in_nodejs/
+## 介绍Redux
+https://code-cartoons.com/a-cartoon-intro-to-redux-3afb775501a6
+## 使用Redux的场景
+https://medium.com/@dan_abramov/you-might-not-need-redux-be46360cf367
+## AntDesign
+https://ant.design/index-cn

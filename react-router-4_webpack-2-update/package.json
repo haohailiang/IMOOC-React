@@ -6,6 +6,7 @@
   "scripts": {
       "build": "webpack",
       "start": "webpack-dev-server --env development",
+      "start2": "webpack-dev-server --hot --inline",
       "build": "./node_modules/.bin/webpack --progress --display-modules --profile --json > stats.json --colors --config webpack.production.config.js"
   },
   "author": "",
