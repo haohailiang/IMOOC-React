@@ -17,7 +17,9 @@ export default class MobileList extends React.Component {
 		var myFetchOptions = {
 			method: 'GET'
 		};
-		fetch("http://newsapi.gugujiankong.com/Handler.ashx?action=getnews&type=" + this.props.type + "&count=" + this.props.count, myFetchOptions).then(response => response.json()).then(json => this.setState({news: json}));
+		fetch("http://newsapi.gugujiankong.com/Handler.ashx?action=getnews&type=" + this.props.type + "&count=" + this.props.count, myFetchOptions)
+			.then(response => response.json())
+			.then(json => this.setState({news: json}));
 	};
 
 	loadMore(resolve){
@@ -30,7 +32,9 @@ export default class MobileList extends React.Component {
 			var myFetchOptions = {
 				method: 'GET'
 			};
-			fetch("http://newsapi.gugujiankong.com/Handler.ashx?action=getnews&type=" + this.props.type + "&count=" + this.state.count, myFetchOptions).then(response => response.json()).then(json => this.setState({news: json}));
+			fetch("http://newsapi.gugujiankong.com/Handler.ashx?action=getnews&type=" + this.props.type + "&count=" + this.state.count, myFetchOptions)
+				.then(response => response.json())
+				.then(json => this.setState({news: json}));
 
 		this.setState({
 			hasMore: count>0 && count<50
