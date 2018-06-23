@@ -1,5 +1,7 @@
-import React from 'react';
-import {Row, Col} from 'antd';
+import React                                 from 'react';
+import {Row, Col}                            from 'antd';
+import {Router, Route, Link, browserHistory} from 'react-router'
+
 import {
 	Menu,
 	Icon,
@@ -12,11 +14,12 @@ import {
 	Modal,
 	Card
 } from 'antd';
-const FormItem = Form.Item;
-const SubMenu = Menu.SubMenu;
-const TabPane = Tabs.TabPane;
+
+const FormItem      = Form.Item;
+const SubMenu       = Menu.SubMenu;
+const TabPane       = Tabs.TabPane;
 const MenuItemGroup = Menu.ItemGroup;
-import {Router, Route, Link, browserHistory} from 'react-router'
+
 class CommonComments extends React.Component {
 	constructor() {
         super();
@@ -38,13 +41,16 @@ class CommonComments extends React.Component {
 			method: 'GET'
 		};
 		var formdata = this.props.form.getFieldsValue();
-		fetch("http://newsapi.gugujiankong.com/Handler.ashx?action=comment&userid=" + localStorage.userid + "&uniquekey=" + this.props.uniquekey + "&commnet=" + formdata.remark, myFetchOptions).then(response => response.json()).then(json => {
-			this.componentDidMount();
-		})
+		fetch("http://newsapi.gugujiankong.com/Handler.ashx?action=comment&userid=" + localStorage.userid + "&uniquekey=" + this.props.uniquekey + "&commnet=" + formdata.remark, myFetchOptions)
+			.then(response => response.json())
+			.then(json => {
+				this.componentDidMount();
+			})
 	};
 	render() {
 		let {getFieldProps} = this.props.form;
-		const {comments} = this.state;
+		const {comments}    = this.state;
+
 		const commnetList = comments.length
 			? comments.map((comment, index) => (
 				<Card key={index} title={comment.UserName} extra={<a href = "#"> 发布于 {comment.datetime} </a>}>
