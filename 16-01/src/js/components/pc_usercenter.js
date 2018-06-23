@@ -1,8 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import {Row, Col, Modal} from 'antd';
-import {Menu, Icon} from 'antd';
-const SubMenu = Menu.SubMenu;
+import React                                 from 'react';
+import ReactDOM                              from 'react-dom';
+import {Row, Col, Modal}                     from 'antd';
+import {Menu, Icon}                          from 'antd';
+const SubMenu       = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
 import {
 	Tabs,
@@ -15,11 +15,12 @@ import {
 	notification,
 	Upload
 } from 'antd';
-const FormItem = Form.Item;
-const TabPane = Tabs.TabPane;
+const FormItem      = Form.Item;
+const TabPane       = Tabs.TabPane;
 import {Router, Route, Link, browserHistory} from 'react-router'
-import PCHeader from './pc_header';
-import PCFooter from './pc_footer';
+import PCHeader                              from './pc_header';
+import PCFooter                              from './pc_footer';
+
 export default class PCUserCenter extends React.Component {
 	render() {
 		return (
